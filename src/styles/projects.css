@@ -1,0 +1,59 @@
+.projects-wrapper {
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.project-entry {
+  margin-bottom: 3rem;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.project-entry:hover {
+  opacity: 0.6;
+}
+
+.project-title {
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin: 0;
+}
+
+.project-title a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.project-title a:hover {
+  text-decoration: underline;
+}
+
+.project-meta {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-top: 0.5rem;
+}
+
+/* Info Section Styling */
+.info-container {
+  padding: 20px;
+}
+
+.info-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.info-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  color: #ccc; /* Softer text color for body */
+  text-align: justify; /* Makes it neater across paragraphs */
+}
+
+.info-text:last-child {
+  margin-bottom: 0; /* Remove bottom margin on last paragraph */
+}
