@@ -3,6 +3,7 @@
   --frame-border: 1px solid white;
   --text-color: white;
   --bg-color: rgb(0, 0, 0);
+  --fade-duration: 0.5s; /* Animation duration */
 }
 
 body,
@@ -51,7 +52,7 @@ html,
 .left-nav h1 {
   font-weight: 300;
   font-size: 2rem;
-  margin: 0;
+  margin-bottom: 0rem;
 }
 
 .left-nav small {
@@ -63,15 +64,19 @@ html,
 .nav-list {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin-top: 4rem;
 }
 
 .nav-item {
   cursor: pointer;
   font-size: 1rem;
-  color: #888;
+  color: #fcfafa;
   margin-bottom: 1rem;
   transition: color 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-left: 0;
 }
 
 .nav-item:hover {
@@ -79,8 +84,20 @@ html,
 }
 
 .nav-item.active {
-  font-weight: bold;
-  color: var(--text-color);
+  font-size: 0; /* Hides the text */
+  position: relative;
+}
+
+.nav-item.active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0.75rem; /* Smaller size */
+  height: 0.75rem;
+  background-color: var(--text-color);
+  border-radius: 50%; /* Makes it a circle */
 }
 
 ul li a {
@@ -125,7 +142,8 @@ ul li a:hover {
   display: flex;
   flex-direction: column-reverse;
   justify-content: flex-start;
-  transition: opacity 0.3s ease;
+  transition: opacity var(--fade-duration) ease,
+    visibility var(--fade-duration) ease;
 }
 
 .corner-labels {
@@ -145,21 +163,46 @@ ul li a:hover {
   border: none;
   box-sizing: border-box;
   overflow: auto;
-  transition: opacity 0.3s ease;
+  transition: opacity var(--fade-duration) ease,
+    visibility var(--fade-duration) ease;
 }
 
+/* Fade animations */
 .section-container.visible,
 .content-area.visible {
   opacity: 1;
+  visibility: visible;
   z-index: 15;
   pointer-events: auto;
+  animation: fadeIn var(--fade-duration) ease forwards;
 }
 
 .section-container.hidden,
 .content-area.hidden {
   opacity: 0;
+  visibility: hidden;
   z-index: 1;
   pointer-events: none;
+  animation: fadeOut var(--fade-duration) ease forwards;
+}
+
+/* Keyframe animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 
 /* Section Positions */
@@ -169,6 +212,37 @@ ul li a:hover {
   transform: translate(-50%, -50%);
   width: 400px;
   height: 750px;
+}
+
+/* Home content styling */
+.home-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.home-content h2 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.home-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.bottom-spiel {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  max-width: 300px;
+  text-align: right;
+  font-style: italic;
+  opacity: 0.8;
 }
 
 .section-top-right {
