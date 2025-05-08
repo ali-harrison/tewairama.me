@@ -24,7 +24,7 @@ const sectionComponents: { [key: string]: React.FC } = {
 }
 
 const Home: React.FC = () => {
-  const [selected, setSelected] = useState('Projects')
+  const [selected, setSelected] = useState('')
   const [prevSelected, setPrevSelected] = useState('')
   const titleRef = useRef<HTMLHeadingElement>(null)
   const listItemsRef = useRef<(HTMLLIElement | null)[]>([])
