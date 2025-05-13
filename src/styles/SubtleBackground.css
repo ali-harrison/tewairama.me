@@ -1,0 +1,16 @@
+.koru-outline path {
+  stroke-dasharray: 3000;
+  stroke-dashoffset: 3000;
+  animation: draw-koru 10s linear infinite;
+  z-index: 1;
+}
+
+@keyframes draw-koru {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.koru-outline path {
+  stroke: lime;
+}
