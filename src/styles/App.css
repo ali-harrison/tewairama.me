@@ -222,8 +222,9 @@ ul li a:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 400px;
-  height: 750px;
+  width: 80%; /* Use relative width */
+  max-width: 400px; /* Maximum width */
+  height: auto; /* Adjust height as needed */
 }
 
 /* Home content styling */
@@ -259,34 +260,37 @@ ul li a:hover {
 
 .section-top-right {
   top: 40px;
-  right: 300px;
-  width: 350px;
-  height: 300px;
+  right: 20px; /* Adjust for smaller screens */
+  width: 80%; /* Use relative width */
+  max-width: 350px; /* Maximum width */
+  height: auto; /* Adjust height as needed */
 }
 
 .section-bottom-left {
   bottom: 20px;
-  left: 270px;
-  width: 350px;
-  height: 300px;
+  left: 20px; /* Adjust for smaller screens */
+  width: 80%; /* Use relative width */
+  max-width: 350px; /* Maximum width */
+  height: auto; /* Adjust height as needed */
 }
 
 .section-bottom-right {
   bottom: 20px;
-  right: 600px;
-  width: 250px;
-  height: 250px;
+  right: 20px; /* Adjust for smaller screens */
+  width: 80%; /* Use relative width */
+  max-width: 250px; /* Maximum width */
+  height: auto; /* Adjust height as needed */
 }
 
 .section-top-middle {
   top: 20px;
-  right: 300px;
-  width: 350px;
-  height: auto;
+  right: 20px; /* Adjust for smaller screens */
+  width: 80%; /* Use relative width */
+  max-width: 350px; /* Maximum width */
+  height: auto; /* Adjust height as needed */
 }
 
-/*background*/
-
+/* Background particles */
 #tsparticles {
   position: fixed;
   width: 100%;
@@ -294,4 +298,35 @@ ul li a:hover {
   z-index: -1;
   top: 0;
   left: 0;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .left-nav {
+    max-width: 150px; /* Adjust for smaller screens */
+  }
+
+  .section-middle,
+  .section-top-right,
+  .section-bottom-left,
+  .section-bottom-right,
+  .section-top-middle {
+    width: 90%; /* Use more relative width on smaller screens */
+    right: 20px; /* Adjust right positioning */
+    left: auto; /* Reset left positioning */
+  }
+}
+
+@media (max-width: 480px) {
+  .left-nav {
+    max-width: 100px; /* Further adjust for very small screens */
+  }
+
+  .home-content h2 {
+    font-size: 2rem; /* Adjust font size for smaller screens */
+  }
+
+  .home-content p {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
 }
