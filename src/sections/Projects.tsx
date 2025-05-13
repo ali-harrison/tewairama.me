@@ -1,5 +1,5 @@
 // src/sections/Projects.tsx
-import React from 'react'
+
 import '../styles/projects.css'
 
 const projects = [
