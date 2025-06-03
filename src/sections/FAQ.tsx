@@ -22,11 +22,12 @@ const FAQ = () => (
       <li className="faq-item">
         <strong className="faq-question">What technologies do you use?</strong>
         <p className="faq-answer">
-          I use a variety of technologies including HTML, CSS, JavaScript,
-          React, Node.js, Express, and databases like MongoDB. I'm also familiar
-          with testing frameworks such as Jest and Enzyme, and I use version
-          control with Git. Additionally, I work with tools and practices like
-          Agile methodologies, pair programming, and continuous integration.
+          I use a wide range of technologies depending on the needs of the
+          project. I'm not limited to a specific stack and enjoy learning and
+          adapting to new tools. That said, I'm confident with modern JavaScript
+          frameworks like React, Astro, and Next.js, and I’ve also worked with
+          Node.js, Express, and various databases like PostgreSQL and MongoDB.
+          I’m always open to picking up whatever tech best suits the problem.
         </p>
       </li>
     </ul>
