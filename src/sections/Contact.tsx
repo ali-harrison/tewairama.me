@@ -17,6 +17,9 @@ const Contact = () => (
       <li>
         <a href="tel:+64272735066">Phone ↗</a>
       </li>
+      <li>
+        <a href="www.linkedin.com/in/te-wairama">LinkedIn ↗</a>
+      </li>
     </ul>
   </div>
 )

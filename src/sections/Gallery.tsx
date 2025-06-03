@@ -3,7 +3,7 @@ const Gallery = () => (
   <div>
     <h2>Gallery</h2>
     <p>
-      nothing to show <strong>sorry.</strong>
+      coming <strong>soon.</strong>
     </p>
   </div>
 )
