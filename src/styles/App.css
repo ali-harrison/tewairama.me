@@ -23,7 +23,8 @@ html,
 .project-title,
 .info-title,
 .faq-title,
-.faq-question {
+.faq-question,
+.bottom-spiel {
   font-family: 'Space Grotesk', sans-serif;
   font-weight: 500;
 }
@@ -121,21 +122,17 @@ ul li a:hover {
   opacity: 0.7;
 }
 
-.outer-wrapper {
-  position: relative;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .frame {
-  width: calc(100vw - 50px);
-  height: calc(100vh - 50px);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90vw;
+  height: 85vh;
+  max-width: 1600px;
   border: 1px solid white;
   padding: 2rem;
   box-sizing: border-box;
-  position: relative;
 }
 
 .content-area {
@@ -159,8 +156,8 @@ ul li a:hover {
 
 .corner-labels {
   position: absolute;
-  bottom: 5px;
-  left: 27px;
+  bottom: -15px;
+  left: 5px;
   color: rgb(250, 248, 248);
   font-size: 12px;
   font-family: monospace;
@@ -256,6 +253,11 @@ ul li a:hover {
   text-align: right;
   font-style: italic;
   opacity: 0.8;
+  display: block;
+}
+
+.bottom-spiel span {
+  display: block;
 }
 
 .section-top-right {
@@ -288,16 +290,6 @@ ul li a:hover {
   width: 80%; /* Use relative width */
   max-width: 350px; /* Maximum width */
   height: auto; /* Adjust height as needed */
-}
-
-/* Background particles */
-#tsparticles {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  top: 0;
-  left: 0;
 }
 
 /* Media Queries for Responsive Design */

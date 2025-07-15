@@ -10,7 +10,7 @@ const sectionPositions: { [key: string]: string } = {
   Projects: 'section-right',
   Info: 'section-middle',
   Contact: 'section-bottom-right',
-  FAQ: 'section-top-middle', // Ensures FAQ is in the top middle
+  FAQ: 'section-top-middle',
   Gallery: 'section-bottom-left',
 }
 
@@ -40,12 +40,12 @@ const Home: React.FC = () => {
   // Function to go back to home/landing page
   const goToHome = () => {
     setPrevSelected(selected)
-    setSelected('') // This will redirect to the root/landing page
+    setSelected('')
   }
 
   return (
     <div className="outer-wrapper">
-      <div className="frame">
+      <div className="frame relative">
         <div className="home-container">
           {/* LEFT NAV */}
           <div className="left-nav">
@@ -71,6 +71,28 @@ const Home: React.FC = () => {
               ))}
             </ul>
           </div>
+
+          {/* HOME TEXT BOX — SHOWN ONLY ON LANDING SCREEN */}
+          {selected === '' && (
+            <div className="bottom-spiel absolute right-8 bottom-8 text-sm leading-relaxed text-white italic text-right max-w-md pointer-events-none">
+              <p className="space-y-1">
+                <span className="block">Born in Aotearoa.</span>
+                <span className="block">Based in Christchurch,</span>
+                <span className="block">I believe</span>
+                <span className="block">creativity and code</span>
+                <span className="block">can shape unique experiences.</span>
+                <span className="block">With a passion</span>
+                <span className="block">for design, tech, and streetwear,</span>
+                <span className="block">I'm exploring</span>
+                <span className="block">the boundaries</span>
+                <span className="block">of digital storytelling,</span>
+                <span className="block">innovation,</span>
+                <span className="block">and identity.</span>
+                <span className="block">Always learning,</span>
+                <span className="block">always evolving.</span>
+              </p>
+            </div>
+          )}
 
           {/* ALL SECTIONS */}
           {selected &&

@@ -4,25 +4,11 @@ import '../styles/projects.css'
 
 const projects = [
   {
-    title: 'TODO App',
+    title: 'Github Has been hacked',
     link: 'https://github.com/ali-harrison/Full-Stack-demo',
-    date: 'July 2024',
+    date: 'July 2025',
     description:
-      'Built to practice full-stack development using React Query and SQLite.',
-  },
-  {
-    title: 'DreamFest',
-    link: 'https://github.com/ali-harrison/Client-Side-App',
-    date: 'May 2024',
-    description:
-      'A client project connecting frontend UI to database functionality.',
-  },
-  {
-    title: 'Pupparazi',
-    link: 'https://github.com/ali-harrison/JSON-API-routes',
-    date: 'May 2024',
-    description:
-      'Workshop project to develop a RESTful API using Express and async operations.',
+      'Currently all my projects and old work on my github has been lost, working on getting it back!',
   },
 ]
 
